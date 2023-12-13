@@ -1,0 +1,286 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #db3434;
+    text-align: center;
+    padding: 30px 0;
+}
+
+header img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.header-content h1 {
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px 0;
+}
+
+.header-content p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* Блоки */
+.section {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #db3434;
+}
+
+.with-border {
+    border: 2px solid #db3434;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Стили для текста */
+.section .title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.section .subtitle {
+    font-size: 18px;
+    color: #777;
+}
+
+/* Сетка */
+.hlayout {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.half-w {
+    width: calc(50% - 20px); 
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header-content h1 {
+        font-size: 24px;
+    }
+
+    .header-content p {
+        font-size: 16px;
+    }
+
+    .half-w {
+        width: 100%;
+        margin-right: 0; 
+    }
+}
+
+/* Стили для кнопки загрузки резюме */
+#downloadResumeBtn {
+    background-color: #db3434;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#downloadResumeBtn:hover {
+    background-color: #ff0000;
+}
+
+
+/* Стили для области проектов */
+.project {
+    border: 2px solid #db3434;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.project h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.project p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Стили для блока Skills */
+.skills {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.skill {
+    text-align: center;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.skill-name {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.skill-level {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #db3434;
+    border-radius: 50%;
+    background-color: #db3434;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+.not {
+    border: 2px solid #881c1c;
+    background-color: #881c1c;
+}
+
+.empty-circle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #db3434;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+/* Стили для блока Languages */
+.with-border h2 {
+    border-bottom: 2px solid #db3434;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.with-border p {
+    margin: 5px 0;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Animations */
+h1, h2, h3 {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+h1, h2, h3 {
+    animation: fadeAndSlideIn 1s ease-out forwards;
+}
+
+@keyframes fadeAndSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.button {
+    background-color: #db3434;
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+header img {
+    transition: transform 0.3s ease-in-out;
+}
+
+header img:hover {
+    transform: scale(1.1);
+}
+
+.section, .with-border, .vlayout, .hlayout {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.section, .with-border, .vlayout, .hlayout {
+    animation: fadeAndSlideIn 1s ease-out forwards;
+}
+
+.container {
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+a {
+    color: #db3434;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
